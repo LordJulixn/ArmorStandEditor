@@ -3,7 +3,7 @@
 #General Configuration
 
 #Languages - ENGLISH, DEUTSCH
-Language: "DEUTSCH"
+Language: "ENGLISH"
 
 #The item that you have to interact with in order to edit an ArmorStand
 #Singleuse = Use the Item like a token, after usage one amount will be removed
