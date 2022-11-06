@@ -1,0 +1,24 @@
+#                                     ArmorStandEditor-Configuration
+
+#General Configuration
+
+#Languages - ENGLISH, DEUTSCH
+Language: "DEUTSCH"
+
+#The item that you have to interact with in order to edit an ArmorStand
+#Singleuse = Use the Item like a token, after usage one amount will be removed
+Item:
+  Type: "FLINT"
+  RequireDisplayname: true
+  Displayname: "&bArmorStand&8-&bEditor"
+  RequireLore: true
+  Lore: "&7A tool to edit an ArmorStand"
+  Singleuse: false
+
+RequirePermission: true
+PermissionUsage: "ArmorStandEditor.EditArmorStands"
+
+PermissionGetItem: "ArmorStandEditor.GetItem"
+
+#Shows the current Value of the position/alignment in the Actionbar
+ActionbarValues: true

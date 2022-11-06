@@ -1,0 +1,7 @@
+name: ArmorStandEditor
+version: 1.0
+main: de.lordjulixn.armorstandeditor.main.Main
+api-version: 1.13
+
+commands:
+  ArmorStandEditor:
