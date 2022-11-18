@@ -1,6 +1,7 @@
 #                                     ArmorStandEditor-Configuration
 
 #General Configuration
+ConfigVersion: "1.0"
 
 #Languages - ENGLISH, DEUTSCH
 Language: "ENGLISH"
@@ -13,11 +14,13 @@ Item:
   Displayname: "&bArmorStand&8-&bEditor"
   RequireLore: true
   Lore: "&7A tool to edit an ArmorStand"
-  Singleuse: false
+  SingleUse: false
 
+#Usage
 RequirePermission: true
 PermissionUsage: "ArmorStandEditor.EditArmorStands"
 
+#GetItem
 PermissionGetItem: "ArmorStandEditor.GetItem"
 
 #Shows the current Value of the position/alignment in the Actionbar

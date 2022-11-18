@@ -27,6 +27,18 @@ public class Messages {
         if(language == Language.DEUTSCH) return "§8[§bArmorStandEditor§8] §7Das Plugin wurde §cdeaktiviert§7!";
         return "§8[§bArmorStandEditor§8] §7The plugin is now §coffline§7!";
     }
+    public static String getConsoleWrongVersionMessage1(Language language, String currentVersion, String configVersion) {
+        //
+        if(language == Language.DEUTSCH) return "§c⚠ ACHTUNG⚠    §7Falsche ConfigVersion §8(§e"+currentVersion+"§7/§e"+configVersion+"§8)";
+        return "§c⚠ DANGER⚠    §7Wrong ConfigVersion §8(§e"+currentVersion+"§7/§e"+configVersion+"§8)";
+        //
+    }
+    public static String getConsoleWrongVersionMessage2(Language language) {
+        //
+        if(language == Language.DEUTSCH) return "§c⚠ ACHTUNG⚠    §7Das Plugin wird §cdeaktiviert§7!";
+        return "§c⚠ DANGER⚠    §7The plugin is getting §cdeactivated§7!";
+        //
+    }
 
     public static String noPermissionsMessage(Language language) {
         if(language == Language.DEUTSCH) return Main.prefix+"Dazu hast du §ckeine Rechte§7!";

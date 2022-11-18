@@ -30,7 +30,6 @@ public class Main extends JavaPlugin {
         plugin = this;
         Files.init(this);
         Files.updateLanguage();
-        initPlugin();
         //
         Bukkit.getConsoleSender().sendMessage("§8§m------------------------------");
         Bukkit.getConsoleSender().sendMessage("");
@@ -39,6 +38,20 @@ public class Main extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("|     ||  _||     || . ||  _||__   ||  _|| .'||   || . ||   __|| . || ||  _|| . ||  _|");
         Bukkit.getConsoleSender().sendMessage("|__|__||_|  |_|_|_||___||_|  |_____||_|  |__,||_|_||___||_____||___||_||_|  |___||_|  ");
         Bukkit.getConsoleSender().sendMessage("");
+        //
+        if(!Files.getConfig().getString("ConfigVersion").equals(getDescription().getVersion())) {
+            String currentVersion = getDescription().getVersion();
+            String configVersion = Files.getConfig().getString("ConfigVersion");
+            Bukkit.getConsoleSender().sendMessage(Messages.getConsoleWrongVersionMessage1(currentLanguage, currentVersion, configVersion));
+            Bukkit.getConsoleSender().sendMessage(Messages.getConsoleWrongVersionMessage2(currentLanguage));
+            Bukkit.getConsoleSender().sendMessage("");
+            Bukkit.getConsoleSender().sendMessage("§8§m------------------------------");
+            Bukkit.getPluginManager().disablePlugin(this);
+            return;
+        }
+        //
+        initPlugin();
+        //
         Bukkit.getConsoleSender().sendMessage(Messages.getConsoleEnableMessage1(currentLanguage));
         Bukkit.getConsoleSender().sendMessage(Messages.getConsoleEnableMessage2(currentLanguage));
         Bukkit.getConsoleSender().sendMessage(Messages.getConsoleEnableMessage3(currentLanguage));

@@ -63,6 +63,14 @@ public class InteractEntityListener implements Listener {
                 InventoryManager.openInventory(player, new InventoryMenu());
                 event.setCancelled(true);
                 //
+                if(!Files.getConfig().getBoolean("Item.SingleUse")) return;
+                //
+                if(item.getAmount() == 1) {
+                    item.setAmount(0);
+                    return;
+                }
+                item.setAmount((item.getAmount()-1));
+                //
             } else player.sendMessage(Messages.armorStandInUseMessage(Main.getLanguage()));
         }
         //

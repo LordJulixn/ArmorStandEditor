@@ -39,39 +39,44 @@ public class ClickItemsSettings {
         if(item.getItemMeta().getDisplayName().equals(InventorySettingsN.nameVisible(Main.getLanguage()))) {
             armorStand.setVisible(!armorStand.isVisible());
             updateItem(item, armorStand.isVisible());
+            player.playSound(player.getLocation(), Sound.ITEM_CROP_PLANT, 1, 1);
             return;
         }
         if(item.getItemMeta().getDisplayName().equals(InventorySettingsN.nameInvulnerable(Main.getLanguage()))) {
             armorStand.setInvulnerable(!armorStand.isInvulnerable());
             updateItem(item, armorStand.isInvulnerable());
+            player.playSound(player.getLocation(), Sound.ITEM_CROP_PLANT, 1, 1);
             return;
         }
         if(item.getItemMeta().getDisplayName().equals(InventorySettingsN.nameBasePlate(Main.getLanguage()))) {
             armorStand.setBasePlate(!armorStand.hasBasePlate());
             updateItem(item, armorStand.hasBasePlate());
+            player.playSound(player.getLocation(), Sound.ITEM_CROP_PLANT, 1, 1);
             return;
         }
         if(item.getItemMeta().getDisplayName().equals(InventorySettingsN.nameGravity(Main.getLanguage()))) {
             armorStand.setGravity(!armorStand.hasGravity());
             updateItem(item, armorStand.hasGravity());
+            player.playSound(player.getLocation(), Sound.ITEM_CROP_PLANT, 1, 1);
             return;
         }
         if(item.getItemMeta().getDisplayName().equals(InventorySettingsN.nameArms(Main.getLanguage()))) {
             armorStand.setArms(!armorStand.hasArms());
             updateItem(item, armorStand.hasArms());
+            player.playSound(player.getLocation(), Sound.ITEM_CROP_PLANT, 1, 1);
             return;
         }
         if(item.getItemMeta().getDisplayName().equals(InventorySettingsN.nameSmall(Main.getLanguage()))) {
             armorStand.setSmall(!armorStand.isSmall());
             updateItem(item, armorStand.isSmall());
+            player.playSound(player.getLocation(), Sound.ITEM_CROP_PLANT, 1, 1);
             return;
         }
         if(item.getItemMeta().getDisplayName().equals(InventorySettingsN.nameCustomName(Main.getLanguage()))) {
             armorStand.setCustomNameVisible(!armorStand.isCustomNameVisible());
-            //
             if(armorStand.isCustomNameVisible()) InventoryManager.openInventory(player, new InventorySettingsY(armorStand));
             else InventoryManager.openInventory(player, new InventorySettingsN(armorStand));
-            //
+            player.playSound(player.getLocation(), Sound.ITEM_CROP_PLANT, 1, 1);
             return;
         }
         if(item.getItemMeta().getDisplayName().equals(Design.backText(Main.getLanguage()))) {
